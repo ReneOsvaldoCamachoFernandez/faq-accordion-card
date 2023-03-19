@@ -52,7 +52,7 @@ export default function Home() {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const handleClick = (index: number) => {
     if (activeIndex === -1) setActiveIndex(index);
@@ -76,11 +76,13 @@ export default function Home() {
             <Accordion
               allowZeroExpanded
               className="overflow-hidden pb-[48px] xl:pb-0 w-full "
+              preExpanded={["id2"]}
             >
               {content.map((contenido, indx) => (
                 <AccordionItem
                   key={indx}
                   id={contenido.uuid}
+                  uuid={contenido.uuid}
                   className="border-b-[1px] py-[15.7px]"
                 >
                   <AccordionItemHeading
