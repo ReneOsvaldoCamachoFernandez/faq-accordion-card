@@ -52,11 +52,12 @@ export default function Home() {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(100);
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   const handleClick = (index: number) => {
-    if (activeIndex === 100) setActiveIndex(index);
-    else setActiveIndex(100);
+    if (activeIndex === -1) setActiveIndex(index);
+    else if (activeIndex !== index) setActiveIndex(index);
+    else setActiveIndex(-1);
   };
   return (
     <>
@@ -84,13 +85,22 @@ export default function Home() {
                     onClick={() => handleClick(indx)}
                   >
                     <AccordionItemButton className="flex justify-between items-center">
-                      <h1 className="text-[#4A4B5E]">{contenido.button}</h1>
+                      <h1
+                        className={
+                          "text-[#4A4B5E] text-lg hover:text-[#F47C57] " +
+                          `${
+                            activeIndex === indx ? "font-bold" : "font-normal"
+                          }`
+                        }
+                      >
+                        {contenido.button}
+                      </h1>
                       <Image
                         src={icoArr}
                         alt="ico"
                         className={
                           "w-[10px] h-[7px] " +
-                          `${activeIndex === indx ? "rotate-180" : "0"}`
+                          `${activeIndex === indx ? "rotate-180" : "rotate-0"}`
                         }
                       ></Image>
                     </AccordionItemButton>
