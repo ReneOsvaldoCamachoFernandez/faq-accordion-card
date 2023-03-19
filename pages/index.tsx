@@ -70,10 +70,13 @@ export default function Home() {
       <main className=" relative px-[24px] xl:px-[280px] font-personal bg-gradient-to-b from-[#AF67E9] to-[#6565E7] h-full flex justify-center">
         <div className="shadow-[0px_26px_47px_-7px_rgba(0,0,0,0.45)] relative xl:overflow-hidden xl:flex xl:items-end h-[536px] xl:h-[510px] mt-[145px] xl:mt-[130px]  flex flex-col items-center bg-white w-full px-[25px] rounded-3xl">
           <div className="xl:w-[350px] xl:mr-[70px]  w-full">
-            <h1 className="text-3xl xl:text-4xl text-[#4A4B5E] font-bold mb-[40px] xl:mb-[10px] mt-[135px] xl:mt-[72px]">
+            <h1 className="text-4xl text-center xl:text-left xl:text-5xl text-[#4A4B5E] font-bold mb-[20px] xl:mb-[10px] mt-[135px] xl:mt-[72px]">
               FAQ
             </h1>
-            <Accordion allowZeroExpanded className=" pb-[48px] xl:pb-0 w-full">
+            <Accordion
+              allowZeroExpanded
+              className="overflow-hidden pb-[48px] xl:pb-0 w-full "
+            >
               {content.map((contenido, indx) => (
                 <AccordionItem
                   key={indx}
