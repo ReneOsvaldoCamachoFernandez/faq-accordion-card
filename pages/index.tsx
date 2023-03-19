@@ -67,8 +67,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon-32x32.png" />
       </Head>
-      <main className=" relative px-[24px] xl:px-[260px] font-personal bg-gradient-to-b from-[#AF67E9] to-[#6565E7] h-full flex justify-center">
-        <div className="relative xl:overflow-hidden xl:flex xl:items-end h-[536px] xl:h-[510px] mt-[145px]  flex flex-col items-center bg-white w-full px-[25px] rounded-3xl">
+      <main className=" relative px-[24px] xl:px-[280px] font-personal bg-gradient-to-b from-[#AF67E9] to-[#6565E7] h-full flex justify-center">
+        <div className="shadow-[0px_26px_47px_-7px_rgba(0,0,0,0.45)] relative xl:overflow-hidden xl:flex xl:items-end h-[536px] xl:h-[510px] mt-[145px] xl:mt-[130px]  flex flex-col items-center bg-white w-full px-[25px] rounded-3xl">
           <div className="xl:w-[350px] xl:mr-[70px]  w-full">
             <h1 className="text-3xl xl:text-4xl text-[#4A4B5E] font-bold mb-[40px] xl:mb-[10px] mt-[135px] xl:mt-[72px]">
               FAQ
@@ -136,7 +136,7 @@ export default function Home() {
         <Image
           src={illustrationBox}
           alt="box"
-          className="absolute top-[325px] left-[168px] z-10 hidden xl:block"
+          className="absolute top-[325px] left-[188px] z-10 hidden xl:block"
         ></Image>
       </main>
     </>
